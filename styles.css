@@ -34,6 +34,7 @@ h1{
     justify-content: center;
     margin: 0 auto;
     width: 80%;
+    padding: 20px;
 }
 .cards-wrapper{
     position: relative;
