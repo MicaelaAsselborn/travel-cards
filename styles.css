@@ -33,6 +33,7 @@ h1{
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
+    width: 80%;
 }
 .cards-wrapper{
     position: relative;
@@ -103,7 +104,7 @@ footer{
     color: white;
     padding: 10px 20%;
 }
-span{
+.title{
     font-size: 20px;
 }
 
@@ -118,6 +119,11 @@ span{
     div p, li{
         font-size: 24px;
     }
+    .container{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
     .cards-wrapper{
         width: 90vw;
         height: 50vh;
@@ -130,5 +136,6 @@ span{
     }
     footer{
         margin-top: 20px;
+        padding: 10px;
     }
 }
