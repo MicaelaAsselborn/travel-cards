@@ -35,9 +35,12 @@ h1{
 }
 .back{
     backface-visibility: hidden;
-    background-color: blueviolet;
+    background-color: rgb(18, 15, 20);
     color: aliceblue;
     transform: rotateY(180deg);
+    padding: 10px;
+    text-align: left;
+    border-radius: 5px;
 }
 .card:hover{
     transform: rotateY(180deg);
@@ -55,4 +58,10 @@ h2{
     font-size: 30px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+}
+p{
+    margin-bottom: 10px;
+}
+li{
+    list-style: none;
 }
