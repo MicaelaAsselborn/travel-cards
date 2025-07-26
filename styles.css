@@ -4,28 +4,52 @@
     box-sizing: border-box;
     font-family: "Sour Gummy", sans-serif;
 }
+:root{
+    --blackish: rgb(18, 15, 20);
+    --black-transparent: rgb(0, 0, 0,0.4);
+}
 body{
     width: 100vw;
     height: 100vh;
-    background-color: peachpuff;
+    height: 100dvh;
+    background-image: url(./images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     text-align: center;
-    margin: 0 10%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 h1{
     font-size: 54px;
+    background-color: var(--black-transparent);
+    color: white;
+    margin-bottom: 30px;
 }
-.cards-container{
-    margin-top: 30px;
+.container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+.cards-wrapper{
     position: relative;
     width: 250px;
     height: 320px;
 }
-.card, .front, .back{
+.front, .back{
     position: absolute;
     height: 100%;
     width: 100%;
+    border: 2px solid var(--blackish);
+    border-radius: 5px;
 }
 .card{
+    height: 100%;
+    width: 100%;
+    position: relative;
     transform-style: preserve-3d;
     transition: all 0.8s ease;
 }
@@ -35,15 +59,21 @@ h1{
 }
 .back{
     backface-visibility: hidden;
-    background-color: rgb(18, 15, 20);
+    background-color: var(--blackish);
     color: aliceblue;
     transform: rotateY(180deg);
     padding: 10px;
     text-align: left;
     border-radius: 5px;
+    overflow-y: auto;
+}
+.back::-webkit-scrollbar{
+    scrollbar-width: thin;
 }
 .card:hover{
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) scale(1.8) translateY(20px);
+    box-shadow: 0 0 10px black;
+    z-index: 1;
 }
 img{
     width: 100%;
@@ -64,4 +94,7 @@ p{
 }
 li{
     list-style: none;
+}
+.inside-container{
+    margin-top: 10px;
 }
