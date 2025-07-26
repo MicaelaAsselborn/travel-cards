@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Sour Gummy", sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: peachpuff;
+    text-align: center;
+    margin: 0 10%;
+}
+h1{
+    font-size: 54px;
+}
+.cards-container{
+    margin-top: 30px;
+    position: relative;
+    width: 250px;
+    height: 320px;
+}
+.card, .front, .back{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 5%;
+}
+.card{
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+}
+.front{
+    backface-visibility: hidden;
+    background-color: brown;
+    color: aliceblue;
+}
+.back{
+    backface-visibility: hidden;
+    background-color: blueviolet;
+    color: aliceblue;
+    transform: rotateY(180deg);
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
