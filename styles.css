@@ -14,13 +14,13 @@ body{
     height: 100dvh;
     background-image: url(./images/background.jpg);
     background-size: cover;
-    background-repeat: repeat;
     background-position: center;
     text-align: center;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-x: hidden;
 }
 h1{
     font-size: 54px;
@@ -29,7 +29,7 @@ h1{
 }
 .container{
     display: flex;
-    gap: 20px;
+    gap: 40px;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
@@ -45,7 +45,6 @@ h1{
     position: absolute;
     height: 100%;
     width: 100%;
-    border: 2px solid var(--blackish);
     border-radius: 5px;
 }
 .card{
@@ -58,6 +57,7 @@ h1{
 .front{
     backface-visibility: hidden;
     color: aliceblue;
+    border: 2px solid var(--blackish);
 }
 .back{
     backface-visibility: hidden;
@@ -68,6 +68,7 @@ h1{
     text-align: left;
     border-radius: 5px;
     overflow-y: auto;
+    border: 2px solid white;
 }
 .back::-webkit-scrollbar{
     scrollbar-width: thin;
@@ -103,7 +104,7 @@ li{
 footer{
     background: var(--blackish);
     color: white;
-    padding: 10px 20%;
+    padding: 10px 30px;
 }
 .title{
     font-size: 20px;
